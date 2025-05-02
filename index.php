@@ -2423,45 +2423,54 @@
 
 
 
-  <!--
-    - FOOTER
-  -->
+   <!-- Footer -->
+   <footer class="footer-pro">
+    <div class="footer-content">
+      <div class="footer-col-block footer-logo">
+        <h2>Electronics Store</h2>
+        <p>Innovation at your fingertips. Powering your DIY journey with top-grade components and tools.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
 
-        <!-- Footer Start -->
-        <footer>
-          <div class="footer-container">
-              <div class="footer-section logo-section">
-                  <h1><b>TechGo</b></h1>
-              </div>
-              <div class="footer-section pages-section">
-                  <h3>Pages</h3>
-                  <ul>
-                      <li><a href="#">Home</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="login.html">Login</a></li>
-                  </ul>
-              </div>
-              <div class="footer-section contact-section">
-                  <h3>Contact Us</h3>
-                  <p><i class="fas fa-phone"></i> Hotline: +201207813367</p>
-                  <p><i class="fas fa-envelope"></i> Email: info@techgo.com</p>
-                  <p><i class="fab fa-whatsapp"></i> WhatsApp: +201207813367</p>
-                  <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com" class="contact-link">Facebook</a></p>
-              </div>
-              <div class="footer-section location-section">
-                  <h3>Location</h3>
-                  <p><i class="fas fa-map-marker-alt"></i> Address: 158 Elhourya St, Elbrahimya, Alexandria, Egypt</p>
-                  <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12892.47684866308!2d29.91249165!3d31.215645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5c4a5b2b2b1bb%3A0x3b3b5f5e5a5b6c8!2s158%20El%20Horeya%20Rd%2C%20El%20Ibrahimeyah%20WA%20Bab%20Shark%2C%20Bab%20Sharqi%2C%20Alexandria%20Governorate%2C%20Egypt!5e0!3m2!1sen!2seg!4v1687582214698!5m2!1sen!2seg"
-                      width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-              </div>
-          </div>
-          <div class="footer-bottom">
-              <p>Copyright Reserved  ©ُtechgo.2025 </p>
-          </div>
-      </footer>
-      <!-- Footer End -->
+      <div class="footer-col-block footer-links">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">Arduino Kits</a></li>
+          <li><a href="#">Sensors</a></li>
+          <li><a href="#">Smart Home</a></li>
+          <li><a href="#">Tools & Gear</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-block footer-links">
+        <h4>Customer</h4>
+        <ul>
+          <li><a href="#">Account</a></li>
+          <li><a href="#">Orders</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-block footer-contact">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Borg El Arab, Egypt</li>
+          <li><i class="fas fa-envelope"></i> support@electronshop.com</li>
+          <li><i class="fas fa-phone"></i> +20 101 630 4392</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Electronics Store — Made with ❤️ for innovators.</p>
+    </div>
+  </footer>
 
 
 

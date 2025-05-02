@@ -2,58 +2,117 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-body {
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: #eef1f5;
     color: #333;
-}
-header{
-    background-color: #0066cc;
-    color:#fff;
-    text-align: center;
-    padding: 0;
-}
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-header p {
-    font-size: 1em;
-}
-.contact-us {
-    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-us {
+    flex: 1;
+    padding: 60px 20px;
     background-color: #fff;
-    text-align: center;
-}
-.contact-us h2 {
-    color: #0066cc;
-    margin-bottom: 20px;
-}
-.contact-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-}
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  }
+  
+  .contact-us h2 {
+    color: #004080;
+    font-size: 2.8em;
+    margin-bottom: 60px;
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
     width: 100%;
-    max-width: 400px;
-    text-align: left;
-}
-.contact-item .icon{
-    font-size: 2em;
-    color: #0066cc;
-
-}
-.contact-item h3{
-    font-size: 1.10m;
+    max-width: 1200px;
+  }
+  
+  .contact-item {
+    background: #f5f7fa;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-height: 200px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+  }
+  
+  .contact-item .icon {
+    font-size: 2.2rem;
+    color: #0055aa;
+  }
+  
+  .contact-item h3 {
+    font-size: 1.25rem;
     margin-bottom: 5px;
-}
-.contact-item p{
-    font-size: 0.9em;
-    margin:0;
-}
+    color: #003366;
+  }
+  
+  .contact-item p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  .contact-item::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 3.5rem;
+    color: rgba(0, 85, 170, 0.07);
+    pointer-events: none;
+  }
+  
+  .contact-item.call::after { content: "\f095"; }         /* phone */
+  .contact-item.whatsapp::after { content: "\f232"; }     /* whatsapp */
+  .contact-item.email::after { content: "\f0e0"; }         /* envelope */
+  .contact-item.location::after { content: "\f3c5"; }      /* map marker */
+  .contact-item.hours::after { content: "\f017"; }         /* clock */
+  .contact-item.support::after { content: "\f1cd"; }       /* life ring */
+  
+  
+  /* لون خاص للواتساب */
+  .contact-item.whatsapp .icon,
+  .contact-item.whatsapp h3,
+  .contact-item.whatsapp p {
+    color: #25d366;
+  }
+  
+  .contact-item.whatsapp::after {
+    content: "\f4ad"; /* ← رمز chat-dots */
+  color: rgba(37, 211, 102, 0.08);
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .contact-us {
+      padding: 40px 15px;
+    }
+  
+    .contact-us h2 {
+      font-size: 2.2em;
+    }
+  }
+  

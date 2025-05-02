@@ -1,0 +1,102 @@
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics Store</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="m.css">
+</head>
+<body>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>We provide the best electronic tools and components for all your DIY and engineering projects.</p>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Borg El Arab, Egypt</li>
+                    <li><i class="fas fa-envelope"></i> support@electronshop.com</li>
+                    <li><i class="fas fa-phone"></i> +20 101 630 4392</li>
+                </ul>
+            </div>
+
+            <div class="footer-section links">
+                <h3>Main Categories</h3>
+                <ul>
+                    <li><a href="#">Arduino Boards</a></li>
+                    <li><a href="#">Sensors & Modules</a></li>
+                    <li><a href="#">Resistore & Capacitors</a></li>
+                    <li><a href="#">Soldering Tools</a></li>
+                    <li><a href="#">Power Supplies</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section account">
+                <h3>My Account</h3>
+                <ul>
+                    <li><a href="#">Login / SignUp</a></li>
+                    <li><a href="#">Shopping Cart</a></li>
+                    <li><a href="#">Orders History</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Stay updated with our latest offers and promotions.</p>
+                <form action="#">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Electronics Store. All rights reserved.</p>
+            <div class="payment-methods">
+                <img src="https://i.ibb.co/Sr0f1Mj/payment.png" alt="Payment Methods">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Go to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript for Scroll to Top -->
+    <script>
+        // Show/hide button on scroll
+        window.onscroll = function() {
+            let btn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        // Scroll to top on click
+        document.getElementById('scrollTopBtn').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+</body>
+</html>

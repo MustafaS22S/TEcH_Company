@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+header{
+    background-color: #0066cc;
+    color:#fff;
+    text-align: center;
+    padding: 0;
+}
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+header p {
+    font-size: 1em;
+}
+.contact-us {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+.contact-us h2 {
+    color: #0066cc;
+    margin-bottom: 20px;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+.contact-item .icon{
+    font-size: 2em;
+    color: #0066cc;
+
+}
+.contact-item h3{
+    font-size: 1.10m;
+    margin-bottom: 5px;
+}
+.contact-item p{
+    font-size: 0.9em;
+    margin:0;
+}

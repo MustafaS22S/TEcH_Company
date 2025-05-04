@@ -148,7 +148,10 @@ body::-webkit-scrollbar-thumb:hover {
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
+.body{
+  background-color: #eef1f5;
 
+}
 .container {
   padding: 0 15px;
 }

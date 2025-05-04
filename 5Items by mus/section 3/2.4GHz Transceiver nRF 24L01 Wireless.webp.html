@@ -28,55 +28,476 @@
     />
   </head>
   <body>
-    <!--
+    
+  <div class="overlay" data-overlay></div>
+
+  <!--
+    - MODAL
+  -->
+
+  
+
+
+
+  <!--
     - HEADER
   -->
 
-    <header class="top-bar">
-      <div class="social-icons">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-linkedin-in"></i>
-      </div>
-      <div class="welcome">WELCOME TO TECHGO STORE</div>
-      <div class="language-currency">
-        <span>EGP</span>
-        <span> | </span>
-        <span>ENGLISH</span>
-      </div>
-    </header>
-    <nav class="main-nav">
-      <!-- لوووووووووووووووووووووجوووووو -->
-      <div class="logo">
-        <img src="" />
-      </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Enter your product name..." />
-        <button><i class="fas fa-search"></i></button>
-      </div>
-      <div class="icons">
-        <i class="fas fa-user"></i>
-        <div class="icon-with-badge">
-          <i class="fas fa-heart"></i>
-          <span class="badge">0</span>
+  <header>
+
+    <div class="header-top">
+
+      <div class="container">
+
+        <ul class="header-social-container">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="header-alert-news">
+          <p>
+            wlcome
+            to <b>TechGo</b> store
+          </p>
         </div>
-        <div class="icon-with-badge">
-          <i class="fas fa-shopping-bag"></i>
-          <span class="badge">0</span>
+
+        <div class="header-top-actions">
+
+          <select name="currency">
+
+            <option value="usd">EGP</option>
+            <option value="eur">none</option>
+
+          </select>
+
+          <select name="language">
+
+            <option value="en-US">English</option>
+            <option value="es-ES">none</option>
+            <option value="fr">soon</option>
+
+          </select>
+
         </div>
+
       </div>
-    </nav>
-    <div class="menu">
-      <a href="#">HOME</a>
-      <a href="#">CATEGORIES</a>
-      <a href="#">ABOUT US</a>
-      <a href="#">CONTACT US</a>
-      <a href="#">BLOG</a>
-      <a href="#">HOT OFFERS</a>
+
     </div>
 
-    <div class="container">
+    <div class="header-main">
+
+      <div class="container">
+
+        <a href="#" class="header-logo">
+          <img src="./assets/images/logo/favicon.jpg" alt="Techgo" width="120" height="36">
+        </a>
+
+        <div class="header-search-container">
+
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="header-user-actions">
+
+          <a href="./login/login.php" class="action-btn">
+            <ion-icon name="person-outline"></ion-icon>
+          </a>
+
+          <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+
+          <button class="action-btn">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <nav class="desktop-navigation-menu">
+
+      <div class="container">
+
+        <ul class="desktop-menu-category-list">
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Home</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Categories</a>
+
+            <div class="dropdown-panel">
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Electronics</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="./assets/images/electronics-banner-1.jpg" alt="electronics-banner" width="250"
+                      height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">modules</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="./assets/images/electronics-banner-1.jpg" alt="electronics-banner" width="250" height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">electronics</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="./assets/images/electronics-banner-2.jpg" alt="electronics-banner" width="250" height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Electronics</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">arduino</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="./assets/images/electronics-banner-2.jpg" alt="electronics-banner" width="250" height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">about us</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">contact us</a>
+
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Blog</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Hot Offers</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+    <div class="mobile-bottom-navigation">
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+
+        <span class="count">0</span>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+
+        <span class="count">0</span>
+      </button>
+
+    </div>
+
+    <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
+
+      <div class="menu-top">
+        <h2 class="menu-title">TeckGO</h2>
+
+        <button class="menu-close-btn" data-mobile-menu-close-btn >
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">Home</a>
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">CATEGORIES</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">SMD Components</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Microcontrollers</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Electronic tools</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Power supplys</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">ABOUT US</a>
+        </li>
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">CONTACT US</a>
+        </li>
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">Blog</a>
+        </li>
+
+      </ul>
+
+      <div class="menu-bottom">
+
+        <ul class="menu-category-list">
+
+          <li class="menu-category">
+
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Language</p>
+
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+
+            <ul class="submenu-category-list" data-accordion>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">English</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">none</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">soon</a>
+              </li>
+
+            </ul>
+
+          </li>
+
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Currency</p>
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">EG</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">SOON</a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <ul class="menu-social-container">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+    <div class="seccontainer">
       <div class="product">
         <img src="./img/2.4GHz Transceiver nRF 24L01 Wireless.webp" alt="JKM NEMA17" />
         <div class="info">
@@ -198,6 +619,15 @@
       <p>© 2025 Electronics Store — Made with ❤ for innovators.</p>
     </div>
   </footer>
-  
+  <!--
+    - custom js link
+  -->
+  <script src="../script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

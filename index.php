@@ -130,19 +130,19 @@
         <ul class="header-social-container">
 
           <li>
-            <a href="#" class="social-link">
+            <a href="www.facebook.com" class="social-link">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
           </li>
 
           <li>
-            <a href="#" class="social-link">
+            <a href="www.twitter.com" class="social-link">
               <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </li>
 
           <li>
-            <a href="#" class="social-link">
+            <a href="www.instagram.com" class="social-link">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
@@ -174,7 +174,7 @@
           <select name="language">
 
             <option value="en-US">English</option>
-            <option value="es-ES">none</option>
+            <option value="es-ES">Egyption</option>
             <option value="fr">soon</option>
 
           </select>
@@ -189,8 +189,8 @@
 
       <div class="container">
 
-        <a href="#" class="header-logo">
-          <img src="./assets/images/logo/favicon.jpg" alt="Techgo" width="120" height="36">
+        <a href="../3About by huss/about.html" class="header-logo">
+          <img src="favicon.jpg" alt="Techgo" width="120" height="36">
         </a>
 
         <div class="header-search-container">
@@ -205,19 +205,19 @@
 
         <div class="header-user-actions">
 
-          <a href="./login/login.php" class="action-btn">
+          <a href="../index.php" class="action-btn">
             <ion-icon name="person-outline"></ion-icon>
           </a>
 
-          <a href="#" class="action-btn">
+          <button class="action-btn">
             <ion-icon name="heart-outline"></ion-icon>
             <span class="count">0</span>
-          </a>
+          </button>
 
-          <a href="#" class="action-btn">
+          <button class="action-btn">
             <ion-icon name="bag-handle-outline"></ion-icon>
             <span class="count">0</span>
-          </a>
+          </button>
 
         </div>
 
@@ -232,169 +232,28 @@
         <ul class="desktop-menu-category-list">
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Home</a>
+            <a href="../index.php" class="menu-title">Home</a>
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Categories</a>
-
-            <div class="dropdown-panel">
-
-              <ul class="dropdown-panel-list">
-
-                <li class="menu-title">
-                  <a href="#">Electronics</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">
-                    <img src="./assets/images/electronics-banner-1.jpg" alt="electronics-banner" width="250"
-                      height="119">
-                  </a>
-                </li>
-
-              </ul>
-
-              <ul class="dropdown-panel-list">
-
-                <li class="menu-title">
-                  <a href="#">modules</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">
-                    <img src="./assets/images/electronics-banner-1.jpg" alt="electronics-banner" width="250" height="119">
-                  </a>
-                </li>
-
-              </ul>
-
-              <ul class="dropdown-panel-list">
-
-                <li class="menu-title">
-                  <a href="#">electronics</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">
-                    <img src="./assets/images/electronics-banner-2.jpg" alt="electronics-banner" width="250" height="119">
-                  </a>
-                </li>
-
-              </ul>
-
-              <ul class="dropdown-panel-list">
-
-                <li class="menu-title">
-                  <a href="#">Electronics</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">arduino</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">
-                    <img src="./assets/images/electronics-banner-2.jpg" alt="electronics-banner" width="250" height="119">
-                  </a>
-                </li>
-
-              </ul>
-
-            </div>
+            <a href="../index.php" class="menu-title">Categories</a>
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">about us</a>
+            <a href="about.html" class="menu-title">about us</a>
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">contact us</a>
+            <a href="../4Contact by r&mar/contact.html" class="menu-title">contact us</a>
 
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Blog</a>
+            <a href="../index.php" class="menu-title">Blog</a>
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Hot Offers</a>
+            <a href="index.php" class="menu-title">Hot Offers</a>
           </li>
 
         </ul>
@@ -425,10 +284,6 @@
         <span class="count">0</span>
       </button>
 
-      <button class="action-btn" data-mobile-menu-open-btn>
-        <ion-icon name="grid-outline"></ion-icon>
-      </button>
-
     </div>
 
     <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
@@ -436,7 +291,7 @@
       <div class="menu-top">
         <h2 class="menu-title">TeckGO</h2>
 
-        <button class="menu-close-btn" data-mobile-menu-close-btn>
+        <button class="menu-close-btn" data-mobile-menu-close-btn >
           <ion-icon name="close-outline"></ion-icon>
         </button>
       </div>
@@ -444,7 +299,7 @@
       <ul class="mobile-menu-category-list">
 
         <li class="menu-category">
-          <a href="#" class="menu-title">Home</a>
+          <a href="index.php" class="menu-title">Home</a>
         </li>
 
         <li class="menu-category">
@@ -461,19 +316,19 @@
           <ul class="submenu-category-list" data-accordion>
 
             <li class="submenu-category">
-              <a href="#" class="submenu-title">arduino</a>
+              <a href="./2Sections by n&t/index.html" class="submenu-title">SMD Components</a>
             </li>
 
             <li class="submenu-category">
-              <a href="#" class="submenu-title">arduino</a>
+              <a href="./2Sections by n&t/index2.html" class="submenu-title">Microcontrollers</a>
             </li>
 
             <li class="submenu-category">
-              <a href="#" class="submenu-title">arduino</a>
+              <a href="./2Sections by n&t/index3.html" class="submenu-title">Electronic tools</a>
             </li>
 
             <li class="submenu-category">
-              <a href="#" class="submenu-title">arduino</a>
+              <a href="./2Sections by n&t/index4.html" class="submenu-title">Power supplys</a>
             </li>
 
           </ul>
@@ -481,19 +336,15 @@
         </li>
 
         <li class="menu-category">
-          <a href="#" class="menu-title">ABOUT US</a>
+          <a href="./3About by huss/about.html" class="menu-title">ABOUT US</a>
         </li>
 
         <li class="menu-category">
-          <a href="#" class="menu-title">CONTACT US</a>
+          <a href="../4Contact by r&mar/contact.css" class="menu-title">CONTACT US</a>
         </li>
 
         <li class="menu-category">
-          <a href="#" class="menu-title">Blog</a>
-        </li>
-
-        <li class="menu-category">
-          <a href="#" class="menu-title">Hot Offers</a>
+          <a href="index.php" class="menu-title">Blog</a>
         </li>
 
       </ul>
@@ -550,19 +401,19 @@
         <ul class="menu-social-container">
 
           <li>
-            <a href="#" class="social-link">
+            <a href="www.facebook.com" class="social-link">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
           </li>
 
           <li>
-            <a href="#" class="social-link">
+            <a href="www.twitter.com" class="social-link">
               <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </li>
 
           <li>
-            <a href="#" class="social-link">
+            <a href="www.instagram.com" class="social-link">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>

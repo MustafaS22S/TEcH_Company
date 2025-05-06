@@ -4,27 +4,25 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// الحصول على الكلمة من GET
 $query = isset($_GET['query']) ? trim($_GET['query']) : '';
 
 if ($query !== '') {
     // منع حقن SQL
     $safeQuery = $conn->real_escape_string($query);
 
-    // تنفيذ البحث
-    $sql = "SELECT name, url FROM product_pages WHERE name LIKE '%$safeQuery%'";
+    // تنفيذ البحث بطريقة غير حساسة لحالة الأحرف
+    $sql = "SELECT name, url FROM product_pages WHERE LOWER(name) LIKE LOWER('%$safeQuery%')";
     $result = $conn->query($sql);
 
-    // التحقق إذا كانت هناك نتائج
     if ($result->num_rows > 0) {
-        // الحصول على أول نتيجة فقط
-        $row = $result->fetch_assoc();
-        $url = htmlspecialchars($row['url']);
-        $fullUrl = "http://localhost/E-commerce/" . $url;  // بناء الرابط الكامل للمنتج
-
-        // إعادة التوجيه مباشرة إلى أول رابط
-        header("Location: $fullUrl");
-        exit;  // تأكد من إنه بعد التوجيه بيوقف تنفيذ باقي الكود
+        echo "<h3>نتائج البحث:</h3>";
+        echo "<ul>";
+        while ($row = $result->fetch_assoc()) {
+            $name = htmlspecialchars($row['name']);
+            $url = htmlspecialchars($row['url']);
+            echo "<li><a href='http://localhost/E-commerce/$url'>$name</a></li>";
+        }
+        echo "</ul>";
     } else {
         echo "<p>لا توجد نتائج مطابقة.</p>";
     }

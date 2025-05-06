@@ -55,7 +55,7 @@
                 
              }
              elseif (isset($_GET["msg"]) && $_GET["msg"] == "user_not_found") {
-                echo "<span style='color:red'>user not found please register</span>";
+                echo "<span style='color:red'>user or password not found please register</span>";
                 
              }
             ?>

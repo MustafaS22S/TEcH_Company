@@ -155,6 +155,25 @@ CREATE TABLE ProductRatings (
     UNIQUE KEY user_product_rating (user_id, product_id) -- Allow only one rating per user per product
 );
 
+-- Table: search_products.
+-- store: name,url_item_padge.
+CREATE TABLE product_pages (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  url VARCHAR(255) NOT NULL
+);
+
+INSERT INTO product_pages (name, url) VALUES
+('Electrec Microphone Amplifier', 'pages/5Items by mus/section 1/Electrec Microphone Amplifier.html'),
+('Force sensitive Resistor Sensor', 'pages/5Items by mus/section 1/Force sensitive Resistor Sensor.html'),
+('Gas Sensor', 'pages/5Items by mus/section 1/Gas Sensor.html'),
+('KY-015 DHT 11 Temperature Sensor', 'pages/5Items by mus/section 1/KY-015 DHT 11 Temperature Sensor .html'),
+('Ultrasonic Distance Sensor', 'pages/5Items by mus/section 1/Ultrasonic Distance Sensor.html'),
+
+
+
+
+
 -- Re-enable foreign key checks
 SET FOREIGN_KEY_CHECKS=1;
 

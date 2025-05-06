@@ -15,9 +15,9 @@ if (empty($errors)) {
     if(!empty($user)){
         $_SESSION["user"] = serialize($user);
         if ($user->role == "admin"){
-            header("location:frontend/admins/admin.php");
+            header("location:../admin.php");
         }else if ($user->role == "subscriber"){
-            header("location:../index.php");
+            header("location:../subscriber.php");
         }
     }else{
         header("location:login.php?msg=user_not_found");}

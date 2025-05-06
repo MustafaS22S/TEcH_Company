@@ -169,6 +169,21 @@ INSERT INTO product_pages (name, url) VALUES
 ('Gas Sensor', 'pages/5Items by mus/section 1/Gas Sensor.html'),
 ('KY-015 DHT 11 Temperature Sensor', 'pages/5Items by mus/section 1/KY-015 DHT 11 Temperature Sensor .html'),
 ('Ultrasonic Distance Sensor', 'pages/5Items by mus/section 1/Ultrasonic Distance Sensor.html'),
+('Arduino Pro Mini', 'pages/5Items by mus/section 2/Arduino Pro Mini.html'),
+('Arduino uno reno 3', 'pages/5Items by mus/section 2/Arduino Uno R3.html'),
+('Joystick Shield for Arduino', 'pages/5Items by mus/section 2/Joystick Shield for Arduino.html'),
+('Mini Breadboard 400 PIN', 'pages/Items by mus/section 2/Mini Breadboard 400 PIN.html'),
+('Raspberry Pi Pico RP2020', 'pages/5Items by mus/section 2/Raspberry Pi Pico RP2020.html'),
+('2.4GHz Transceiver nRF 24L01 Wireless', 'pages/5Items by mus/section 3/2.4GHz Transceiver nRF 24L01 Wireless.webp.html'),
+('Emergency Stop Switch', 'pages/5Items by mus/section 3/Emergency Stop Switch.html'),
+('GSM-GPRS Arduino SIM900', 'pages/5Items by mus/section 3/GSM-GPRS Arduino SIM900.html'),
+('OnOff Rocker Switch', 'pages/5Items by mus/section 3/OnOff Rocker Switch.html'),
+('RF Kit 433 Mhz Wireless', 'pages/5Items by mus/section 3/RF Kit 433 Mhz Wireless.html'),
+('Arduino Li-ion Battery Charging', 'pages/5Items by mus/section 4/Arduino Li-ion Battery Charging.html'),
+('DC to DC Converter 48V→12V 30A Waterproof', 'pages/5Items by mus/section 4/DC to DC Converter 48V→12V 30A Waterproof.html'),
+('TP5100 Lithium Battery Charger', 'pages/5Items by mus/section 4/TP5100 Lithium Battery Charger.html'),
+('Triple Channel 18650 Charger 3.7v 3A', 'pages/5Items by mus/section 4/Triple Channel 18650 Charger 3.7v 3A.html'),
+('Ultracell Lead Acid Battery 12V 26A<', 'pages/5Items by mus/section 4/Ultracell Lead Acid Battery 12V 26A.html');
 
 
 

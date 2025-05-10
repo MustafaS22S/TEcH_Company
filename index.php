@@ -1,3 +1,33 @@
+
+<?php
+session_start();  // تأكد أنك في الجلسة
+$conn = new mysqli("localhost", "root", "", "techgo");  // الاتصال بقاعدة البيانات
+
+$user_id = $_SESSION['user_id'];  // الحصول على الـ user_id من الجلسة
+$product_id = 123; // مثلاً يمكن تخزين الـ product_id بشكل ثابت أو تحديده عبر قاعدة بيانات إذا كانت الصفحة تعرض منتج معين
+
+// استخدام prepared statement لتجنب SQL Injection
+$sql = "SELECT 1 FROM Wishlists WHERE user_id = ? AND product_id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ii", $user_id, $product_id);  // ربط المتغيرات بالـ query
+$stmt->execute();
+$result = $stmt->get_result();
+$is_favorite = $result->num_rows > 0;  // إذا وجدنا السطر في المفضلة، سيكون true
+
+$stmt->close();  // غلق الـ statement بعد الاستخدام
+$conn->close();  // غلق الاتصال بقاعدة البيانات
+?>
+<!DOCTYPE html>
+<html lang="en">
+<!-- هنا تكمل باقي الكود -->
+<form action="toggle_wishlist.php" method="post">
+  <input type="hidden" name="user_id" value="<?= $user_id ?>"> <!-- ارسال user_id -->
+  <button type="submit" class="btn-action" aria-label="Toggle Wishlist">
+    <ion-icon name="<?= $is_favorite ? 'heart' : 'heart-outline' ?>"></ion-icon> <!-- تغيير الأيقونة حسب حالة المفضلة -->
+  </button>
+</form>
+</html>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +60,9 @@
 </head>
 
 <body class="">
+
+
+
 
 
   <div class="overlay" data-overlay=""></div>
@@ -996,9 +1029,13 @@
 
                   <div class="showcase-actions">
 
-                    <button class="btn-action">
-                      <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                    </button>
+                   <form action="toggle_wishlist.php" method="post">  <!-- فورم لإرسال البيانات -->
+  <input type="hidden" name="product_id" value="<?= $product_id ?>">  <!-- إرسال product_id hidden -->
+  <button type="submit" class="btn-action" aria-label="Toggle Wishlist">  <!-- زر الإضافة أو الحذف من المفضلة -->
+    <ion-icon name="<?= $is_favorite ? 'heart' : 'heart-outline' ?>"></ion-icon>  <!-- لو في المفضلة يبان قلب مليان، لو مش في المفضلة يبان قلب فاضي -->
+  </button>
+</form>
+
 
                     
 
@@ -1036,9 +1073,13 @@
                   <p class="showcase-badge angle black">sale</p>
 
                   <div class="showcase-actions">
-                    <button class="btn-action">
-                      <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                    </button>
+                   <form action="toggle_wishlist.php" method="post">  <!-- فورم لإرسال البيانات -->
+  <input type="hidden" name="product_id" value="<?= $product_id ?>">  <!-- إرسال product_id hidden -->
+  <button type="submit" class="btn-action" aria-label="Toggle Wishlist">  <!-- زر الإضافة أو الحذف من المفضلة -->
+    <ion-icon name="<?= $is_favorite ? 'heart' : 'heart-outline' ?>"></ion-icon>  <!-- لو في المفضلة يبان قلب مليان، لو مش في المفضلة يبان قلب فاضي -->
+  </button>
+</form>
+
 
                     
 
@@ -1072,9 +1113,13 @@
                   <img src="./assets/images/products/Delay Real-time-1.jpeg" alt="Delay Real-time" class="product-img hover" width="300">
 
                   <div class="showcase-actions">
-                    <button class="btn-action">
-                      <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                    </button>
+                   <form action="./wishlist/toggle_wishlist.php" method="post">  <!-- فورم لإرسال البيانات -->
+                     <input type="hidden" name="product_id" value="<?= $product_id ?>">  <!-- إرسال product_id hidden -->
+                      <button type="submit" class="btn-action" aria-label="Toggle Wishlist">  <!-- زر الإضافة أو الحذف من المفضلة -->
+                        <ion-icon name="<?= $is_favorite ? 'heart' : 'heart-outline' ?>"></ion-icon>  <!-- لو في المفضلة يبان قلب مليان، لو مش في المفضلة يبان قلب فاضي -->
+                      </button>
+                   </form>
+
 
                     
 
@@ -1109,9 +1154,13 @@
                   <p class="showcase-badge angle blue">new</p>
 
                   <div class="showcase-actions">
-                    <button class="btn-action">
-                      <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                    </button>
+                   <form action="toggle_wishlist.php" method="post">  <!-- فورم لإرسال البيانات -->
+  <input type="hidden" name="product_id" value="<?= $product_id ?>">  <!-- إرسال product_id hidden -->
+  <button type="submit" class="btn-action" aria-label="Toggle Wishlist">  <!-- زر الإضافة أو الحذف من المفضلة -->
+    <ion-icon name="<?= $is_favorite ? 'heart' : 'heart-outline' ?>"></ion-icon>  <!-- لو في المفضلة يبان قلب مليان، لو مش في المفضلة يبان قلب فاضي -->
+  </button>
+</form>
+
 
                     
 
@@ -1144,9 +1193,13 @@
                   <img src="./assets/images/products/JKM NEMA17 Hybride stepper Motor 2 Phase-1.jpeg" alt="JKM NEMA17 Hybride stepper Motor 2 Phase" class="product-img hover" width="300">
 
                   <div class="showcase-actions">
-                    <button class="btn-action">
-                      <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                    </button>
+                   <form action="toggle_wishlist.php" method="post">  <!-- فورم لإرسال البيانات -->
+  <input type="hidden" name="product_id" value="<?= $product_id ?>">  <!-- إرسال product_id hidden -->
+  <button type="submit" class="btn-action" aria-label="Toggle Wishlist">  <!-- زر الإضافة أو الحذف من المفضلة -->
+    <ion-icon name="<?= $is_favorite ? 'heart' : 'heart-outline' ?>"></ion-icon>  <!-- لو في المفضلة يبان قلب مليان، لو مش في المفضلة يبان قلب فاضي -->
+  </button>
+</form>
+
 
                     
 
@@ -1181,9 +1234,13 @@
                   <p class="showcase-badge angle black">sale</p>
 
                   <div class="showcase-actions">
-                    <button class="btn-action">
-                      <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                    </button>
+                   <form action="toggle_wishlist.php" method="post">  <!-- فورم لإرسال البيانات -->
+  <input type="hidden" name="product_id" value="<?= $product_id ?>">  <!-- إرسال product_id hidden -->
+  <button type="submit" class="btn-action" aria-label="Toggle Wishlist">  <!-- زر الإضافة أو الحذف من المفضلة -->
+    <ion-icon name="<?= $is_favorite ? 'heart' : 'heart-outline' ?>"></ion-icon>  <!-- لو في المفضلة يبان قلب مليان، لو مش في المفضلة يبان قلب فاضي -->
+  </button>
+</form>
+
 
                     
 
@@ -1217,9 +1274,13 @@
                   <img src="./assets/images/products/MD0498  DC DC Boost Converter 10 32VDC to 12 35VDC 10A 150W Adjustable Step Up Module-1.jpg" alt="MD0498  DC DC Boost Converter " class="product-img hover" width="300">
 
                   <div class="showcase-actions">
-                    <button class="btn-action">
-                      <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                    </button>
+                   <form action="toggle_wishlist.php" method="post">  <!-- فورم لإرسال البيانات -->
+  <input type="hidden" name="product_id" value="<?= $product_id ?>">  <!-- إرسال product_id hidden -->
+  <button type="submit" class="btn-action" aria-label="Toggle Wishlist">  <!-- زر الإضافة أو الحذف من المفضلة -->
+    <ion-icon name="<?= $is_favorite ? 'heart' : 'heart-outline' ?>"></ion-icon>  <!-- لو في المفضلة يبان قلب مليان، لو مش في المفضلة يبان قلب فاضي -->
+  </button>
+</form>
+
 
                     
 
@@ -1255,9 +1316,13 @@
                   <p class="showcase-badge angle black">sale</p>
 
                   <div class="showcase-actions">
-                    <button class="btn-action">
-                      <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                    </button>
+                   <form action="toggle_wishlist.php" method="post">  <!-- فورم لإرسال البيانات -->
+  <input type="hidden" name="product_id" value="<?= $product_id ?>">  <!-- إرسال product_id hidden -->
+  <button type="submit" class="btn-action" aria-label="Toggle Wishlist">  <!-- زر الإضافة أو الحذف من المفضلة -->
+    <ion-icon name="<?= $is_favorite ? 'heart' : 'heart-outline' ?>"></ion-icon>  <!-- لو في المفضلة يبان قلب مليان، لو مش في المفضلة يبان قلب فاضي -->
+  </button>
+</form>
+
 
                     
 
@@ -1290,9 +1355,13 @@
                   <img src="./assets/images/products/Rp-c7.6-st Thin Film Pressure Sensor-1.jpeg" alt="Rp-c7.6-st Thin Film Pressure Sensor" class="product-img hover" width="300">
 
                   <div class="showcase-actions">
-                    <button class="btn-action">
-                      <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                    </button>
+                   <form action="toggle_wishlist.php" method="post">  <!-- فورم لإرسال البيانات -->
+  <input type="hidden" name="product_id" value="<?= $product_id ?>">  <!-- إرسال product_id hidden -->
+  <button type="submit" class="btn-action" aria-label="Toggle Wishlist">  <!-- زر الإضافة أو الحذف من المفضلة -->
+    <ion-icon name="<?= $is_favorite ? 'heart' : 'heart-outline' ?>"></ion-icon>  <!-- لو في المفضلة يبان قلب مليان، لو مش في المفضلة يبان قلب فاضي -->
+  </button>
+</form>
+
 
                     
 
@@ -1327,9 +1396,13 @@
                   <p class="showcase-badge angle black">sale</p>
 
                   <div class="showcase-actions">
-                    <button class="btn-action">
-                      <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                    </button>
+                   <form action="toggle_wishlist.php" method="post">  <!-- فورم لإرسال البيانات -->
+  <input type="hidden" name="product_id" value="<?= $product_id ?>">  <!-- إرسال product_id hidden -->
+  <button type="submit" class="btn-action" aria-label="Toggle Wishlist">  <!-- زر الإضافة أو الحذف من المفضلة -->
+    <ion-icon name="<?= $is_favorite ? 'heart' : 'heart-outline' ?>"></ion-icon>  <!-- لو في المفضلة يبان قلب مليان، لو مش في المفضلة يبان قلب فاضي -->
+  </button>
+</form>
+
 
                     
 
@@ -1362,9 +1435,13 @@
                   <img src="./assets/images/products/SOLAR PANEL 18V 30V.webp" alt="SOLAR PANEL 18V 30V" class="product-img hover" width="300">
 
                   <div class="showcase-actions">
-                    <button class="btn-action">
-                      <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                    </button>
+                   <form action="toggle_wishlist.php" method="post">  <!-- فورم لإرسال البيانات -->
+  <input type="hidden" name="product_id" value="<?= $product_id ?>">  <!-- إرسال product_id hidden -->
+  <button type="submit" class="btn-action" aria-label="Toggle Wishlist">  <!-- زر الإضافة أو الحذف من المفضلة -->
+    <ion-icon name="<?= $is_favorite ? 'heart' : 'heart-outline' ?>"></ion-icon>  <!-- لو في المفضلة يبان قلب مليان، لو مش في المفضلة يبان قلب فاضي -->
+  </button>
+</form>
+
 
                     
 
@@ -1399,9 +1476,13 @@
                   <p class="showcase-badge angle black">sale</p>
 
                   <div class="showcase-actions">
-                    <button class="btn-action">
-                      <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                    </button>
+                   <form action="toggle_wishlist.php" method="post">  <!-- فورم لإرسال البيانات -->
+  <input type="hidden" name="product_id" value="<?= $product_id ?>">  <!-- إرسال product_id hidden -->
+  <button type="submit" class="btn-action" aria-label="Toggle Wishlist">  <!-- زر الإضافة أو الحذف من المفضلة -->
+    <ion-icon name="<?= $is_favorite ? 'heart' : 'heart-outline' ?>"></ion-icon>  <!-- لو في المفضلة يبان قلب مليان، لو مش في المفضلة يبان قلب فاضي -->
+  </button>
+</form>
+
 
                     
 
